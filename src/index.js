@@ -18,7 +18,7 @@ function getElements(response) {
     $('.showWind').text(`Current wind speed is ${response.wind.speed} m/s & direction ${response.wind.deg} degrees.`);
     $('.showDescription').text(response.weather[0].description);
   } else {
-    $('.showErrors').text(`There was an error: ${response.message}`);
+    $('.showErrors').text(`There was an error: ${response}`);
   }
 }
 
@@ -26,11 +26,10 @@ $('#weatherLocation').click(function() {
   let zipcode = $('#location').val();
   let language = $('#language-picker').val();
   clearFields();
-  WeatherService.getWeather(zipcode, language)
-  .then(function(response) {
-    console.log(response);
+  (async function() {
+    const response = await WeatherService.getWeather(zipcode, language);
     getElements(response);
-  });
+  })();
 });   
 
 
