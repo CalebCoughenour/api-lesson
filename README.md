@@ -1,6 +1,6 @@
 # _{Application Name}_
 
-#### By _**Caleb Coughenour**_
+#### By _****_
 
 #### _{Brief description of application}_
 
@@ -33,4 +33,4 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
 
 _MIT Licensed_
 
-Copyright (c) _date_ _Caleb Coughenour_
+Copyright (c) _date_ __
